@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About - Parity Chatroom</title>
+	<link rel="icon" type="image/x-icon" href="logo.png">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="navbar.css">
+	<link rel="stylesheet" href="about.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<script>
+		(function ($) {
+			$(function () {
+
+				$('nav ul li a:not(:only-child)').click(function (e) {
+					$(this).siblings('.nav-dropdown').toggle();
+
+					$('.nav-dropdown').not($(this).siblings()).hide();
+					e.stopPropagation();
+				});
+
+				$('html').click(function () {
+					$('.nav-dropdown').hide();
+				});
+
+				$('#nav-toggle').click(function () {
+					$('nav ul').slideToggle();
+				});
+
+				$('#nav-toggle').on('click', function () {
+					this.classList.toggle('active');
+				});
+			});
+		})(jQuery);
+	</script>
+
+	<section class="navigation">
+		<div class="nav-container">
+			<div class="brand">
+				<a>Parity Chat</a>
+			</div>
+			<nav>
+				<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+				<ul class="nav-list">
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="404.html">Settings</a>
+					</li>
+					<li>
+						<a>Rooms</a>
+						<ul class="nav-dropdown">
+							<li>
+								<a href="https://parity.cf/rooms/general/landing.php">General 💬</a>
+							</li>
+							<li>
+								<a href="https://parity.cf/rooms/code/landing.php">Programming 👨‍💻</a>
+							</li>
+							<li>
+								<a href="https://parity.cf/rooms/offtopic/landing.php">Off Topic 🎉</a>
+							</li>
+							<li>
+								<a href="https://parity.cf/rooms/work/landing.php">Work 📝</a>
+							</li>
+							<li>
+								<a href="https://parity.cf/potato.php">Potato 🥔</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="404.html">Memes</a>
+					</li>
+					<li>
+						<a href="404.html">Leo Gallery</a>
+					</li>
+					<li>
+						<a href="404.html">VC</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<br>
+	<br>
+
+	<h1>Welcome to Parity!<br><br><br>Parity first started off as a small chatroom for school so we could collaborate, ask
+		questions
+		to each other, and chill and talk.<br><br><br>And the funny thing is, it turned out to be a disaster.<br><br><br>People
+		were getting
+		chaotic, the hosting service accused me of stuff, and things were pretty much scrambled just like scrambled eggs
+		:/.<br><br><br>But in the end, it was for a learning experience and for fun. In the beginning, it was only me
+		(a middle
+		schooler), who almost built it entirely on PHP.<br><br><br>And little did I know it would turn out to be much more
+		than
+		being just a chatroom for school.<br><br><br>Later on, Parity improved more, I got more devs, and in the end, I got
+		more
+		knowledge and, overall, it was very fun to make!<br><br><br>And when I say we improved it, I REALLY MEAN WE IMPROVED
+		IT!<br><br><br>Seriously, it may seem really simple right now to a normal person, but we started with a single page and
+		JavaScript echoing out the
+		contents of a text box whenever you clicked enter, and then you could only see messages on one screen.<br><br><br>But now here
+		we are: Parity, a rip-off off version of Discord.<br><br><br>So here is how Parity works.<br><br><br>There are 4 chat rooms: General, Programming,
+		Off Topic, Work, and
+		Potato (which is only for people who are on potatoes, if you know what I mean, lol).<br><br><br>Right now, we are currently
+		developing other stuff in Parity, such as more rooms (not only chat rooms though), better user experience, etc.<br><br><br>So if you have any questions, suggestions, requests, and possibly also even want to become a dev, then feel free
+		to email me!<br><br><br></h1>
+
+	<form class="contact_form" action="#">
+		<input class="name" type="text" placeholder="Full Name" />
+		<input class="email" type="email" placeholder="Email" />
+		<textarea class="msg" cols="5" rows="5" placeholder="Your message here..."></textarea>
+		<button type="submit">Send Message</button>
+	</form>
+
+	<h1>P.S. We have <a href="https://parity.cf/download.php" target=_blank>apps</a></h1>
+</body>
+
+</html>
